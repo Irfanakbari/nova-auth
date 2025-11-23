@@ -20,7 +20,7 @@ Our goal is to provide a seamless developer experience, allowing you to secure y
 ## Installation
 
 ```bash
-npm install @irfanakbari/auth
+npm install @irfanakbari/nova-auth
 ```
 
 ## How to Import
@@ -32,7 +32,7 @@ To use the `AuthModule`, you need to import it into your application's root modu
 ```typescript
 // app.module.ts
 import { Module } from '@nestjs/common';
-import { AuthModule } from '@irfanakbari/auth';
+import { AuthModule } from '@irfanakbari/nova-auth';
 
 @Module({
   imports: [
@@ -49,7 +49,7 @@ export class AppModule {}
 ```typescript
 // app.module.ts
 import { Module } from '@nestjs/common';
-import { AuthModule } from '@irfanakbari/auth';
+import { AuthModule } from '@irfanakbari/nova-auth';
 import { HealthController } from './health.controller';
 
 @Module({
@@ -113,7 +113,7 @@ After a user is authenticated, the `AuthGuard` attaches the user's information t
 ```typescript
 // me.controller.ts
 import { Controller, Get } from '@nestjs/common';
-import { User, AuthUserDto } from '@irfanakbari/auth';
+import { User, AuthUserDto } from '@irfanakbari/nova-auth';
 
 @Controller('me')
 export class MeController {
@@ -138,7 +138,7 @@ To restrict a route to specific roles, you can use the `@Roles()` decorator.
 ```typescript
 // your.controller.ts
 import { Controller, Get, UseGuards } from '@nestjs/common';
-import { AuthGuard, Public, Roles } from '@irfanakbari/auth';
+import { AuthGuard, Public, Roles } from '@irfanakbari/nova-auth';
 
 @Controller('items')
 @UseGuards(AuthGuard) // Protect all routes in this controller
