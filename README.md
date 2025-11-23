@@ -144,7 +144,7 @@ import { AuthGuard, Public, Roles } from '@irfanakbari/nova-auth';
 @UseGuards(AuthGuard) // Protect all routes in this controller
 export class ItemsController {
   @Get()
-  @Roles('USER') // Only users with the 'USER' role can access this route
+  @Roles(['USER']) // Only users with the 'USER' role can access this route
   findAll() {
     return 'This is a protected route for users.';
   }
@@ -156,7 +156,7 @@ export class ItemsController {
   }
 
   @Get('admin')
-  @Roles('ADMIN') // Only users with the 'ADMIN' role can access this route
+  @Roles(['ADMIN']) // Only users with the 'ADMIN' role can access this route
   findForAdmin() {
     return 'This is a protected route for admins.';
   }
