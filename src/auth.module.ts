@@ -16,10 +16,13 @@ export class AuthModule {
     const providerOptions = {
       provide: AUTH_MODULE_OPTIONS,
       useValue: {
-        bypassRoles: options.bypassRoles ?? ['SUPER', 'MGR_IT'],
+        bypassRoles: options.bypassRoles ?? ['SUPER'],
         jwtSecret: options.jwtSecret,
         roleAggregator: options.roleAggregator,
         sessionValidator: options.sessionValidator,
+        exclude: options.exclude,
+        excludeControllers: options.excludeControllers,
+        excludeModulePrefix: options.excludeModulePrefix,
       },
     };
 

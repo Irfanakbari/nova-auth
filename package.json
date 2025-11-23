@@ -1,6 +1,6 @@
 {
   "name": "@irfanakbari/nova-auth",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Authentication and authorization module for NestJS",
   "author": "Irfan Akbari Habibi",
   "private": false,
